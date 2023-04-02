@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <%- include('common/common'); %>
+    <h1>Welcome <%= user.username %></h1>
+    <h3>Your email : <%= user.email %></h3>
+    <h3>Your phone: <%= user.phoneNo %></h3>
+    <ul>
+        <% user.skills.forEach( (ele) => { %>
+          <li>  
+            <%= ele %>
+          </li>  
+        <% }); %>
+    </ul>
+</body>
+</html>
